@@ -4,7 +4,9 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('languages', views.LanguageView)
+router.register('programmers', views.ProgrammerView)
+router.register('paradigms', views.ParadigmView)
 
 urlpatterns =[
-    path('', include(router.urls)),
+    path('showcase/', include(router.urls)),
 ]
